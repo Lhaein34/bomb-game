@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>폭탄돌리기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- 시작 화면 -->
+    <section id="setupScreen" class="screen active">
+      <h1 class="title">💣 폭탄돌리기</h1>
+
+      <div class="form-box">
+        <label class="label" for="minTime">최소 시간(초)</label>
+        <input id="minTime" class="input" type="number" min="3" max="300" value="10" />
+
+        <label class="label" for="maxTime">최대 시간(초)</label>
+        <input id="maxTime" class="input" type="number" min="3" max="300" value="25" />
+
+        <p class="hint">시간은 보이지 않습니다.</p>
+        <button id="startBtn" class="btn">시작하기</button>
+      </div>
+    </section>
+
+    <!-- 플레이 화면 -->
+    <section id="playScreen" class="screen">
+      <div id="backgroundGlow" class="background-glow"></div>
+
+      <div id="bomb" class="bomb" aria-label="폭탄">
+        <div class="bomb-top"></div>
+        <div class="bomb-body">💣</div>
+      </div>
+
+      <p id="statusText" class="status-text">휴대폰을 옆 사람에게 넘기세요</p>
+      <p class="sub-text">언제 터질지 모릅니다</p>
+    </section>
+
+    <!-- 폭발 화면 -->
+    <section id="resultScreen" class="screen">
+      <div class="explode-icon">💥</div>
+      <h2 class="result-title">터졌습니다!</h2>
+      <p class="result-text">이번 판은 여기까지 😈</p>
+      <button id="restartBtn" class="btn">다시하기</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

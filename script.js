@@ -144,12 +144,9 @@ function playBeep() {
  * 폭발음
  */
 function playExplosionSound() {
-  if (!audioCtx) return;
-
-  // 낮아지는 노이즈 느낌 대신 여러 톤 겹쳐서 간단 폭발음 흉내
-  playTone(140, 0.35, "sawtooth", 0.08);
-  playTone(90, 0.45, "square", 0.06);
-  playTone(60, 0.55, "triangle", 0.05);
+  const audio = new Audio("explosion.mp3");
+  audio.volume = 1.0; // 최대 볼륨
+  audio.play();
 }
 
 /**

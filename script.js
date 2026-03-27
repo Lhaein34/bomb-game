@@ -144,7 +144,7 @@ function playBeep() {
  * 폭발음
  */
 function playExplosionSound() {
-  const audio = new Audio("explosion.mp3");
+  const audio = new Audio("soundreality-explosion-fx-343683.mp3");
   audio.volume = 1.0; // 최대 볼륨
   audio.play();
 }
